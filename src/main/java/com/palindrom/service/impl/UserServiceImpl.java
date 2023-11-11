@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
     public void addNewWord(String word, Long userId) {
         User user = userRepository.findById(userId)
                 .orElseThrow();
-        if (staticService.isPalindrome(word.replace(" ", "").toLowerCase(), 0) && !user.getActiveWords().contains(word)) {
+        if (staticService.isPalindrome(word, 0) && !user.getActiveWords().contains(word)) {
             user.addNewWord(word);
             user.addScore((long) word.length());
             userRepository.save(user.getId(), user);
