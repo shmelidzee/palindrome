@@ -6,9 +6,9 @@
 # Result
 Input data
 
-![image](https://github.com/shmelidzee/palindrome/assets/100793483/e57bba7b-d216-4ed8-8874-cf718a41f67d)
+![image](https://github.com/shmelidzee/palindrome/assets/100793483/aaee453c-6992-427a-bbb4-cf88789f5006)
 
 Output data
 
-![image](https://github.com/shmelidzee/palindrome/assets/100793483/fe510d0a-9ee7-4a4a-a72e-e3fedef8674b)
+![image](https://github.com/shmelidzee/palindrome/assets/100793483/038203d2-838f-465a-8eb5-a72a41060020)
 
