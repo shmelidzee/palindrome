@@ -13,12 +13,17 @@ public class GameServiceImpl implements GameService {
         User ivan = userService.createNewUser("Ivan");
         User pavel = userService.createNewUser("Pavel");
         User gena = userService.createNewUser("Gena");
-        User vasya = userService.createNewUser("Vasya");
+        User andrey = userService.createNewUser("Andrey");
         User denis = userService.createNewUser("Denis");
         User dima = userService.createNewUser("Dmitry");
 
         userService.addNewWord("Доход", ivan.getId());
-        userService.addNewWord("Доход", pavel.getId());
+        userService.addNewWord("Топот", ivan.getId());
+        userService.addNewWord("Кабак", pavel.getId());
+        userService.addNewWord("Шалаш", gena.getId());
+        userService.addNewWord("А роза упала на лапу Азора", andrey.getId());
+        userService.addNewWord("заказ", denis.getId());
+        userService.addNewWord("Не палиндром, в список лидеров не попал", dima.getId());
 
         userService.findTopFiveLeaders()
                 .forEach(s -> System.out.println(s.getName() + " " + s.getScore()));
