@@ -1,9 +1,9 @@
-package com.palindrom.service.impl;
+package com.palindrome.service.impl;
 
-import com.palindrom.domain.User;
-import com.palindrom.repository.UserRepository;
-import com.palindrom.service.StaticService;
-import com.palindrom.service.UserService;
+import com.palindrome.domain.User;
+import com.palindrome.repository.UserRepository;
+import com.palindrome.service.StaticService;
+import com.palindrome.service.UserService;
 
 import java.util.ArrayList;
 import java.util.Comparator;

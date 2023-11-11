@@ -1,6 +1,6 @@
-package com.palindrom.service;
+package com.palindrome.service;
 
-import com.palindrom.domain.User;
+import com.palindrome.domain.User;
 
 import java.util.List;
 

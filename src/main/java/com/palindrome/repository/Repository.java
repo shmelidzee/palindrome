@@ -1,4 +1,4 @@
-package com.palindrom.repository;
+package com.palindrome.repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;

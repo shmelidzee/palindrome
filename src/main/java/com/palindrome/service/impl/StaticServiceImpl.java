@@ -1,6 +1,6 @@
-package com.palindrom.service.impl;
+package com.palindrome.service.impl;
 
-import com.palindrom.service.StaticService;
+import com.palindrome.service.StaticService;
 
 public class StaticServiceImpl implements StaticService {
 

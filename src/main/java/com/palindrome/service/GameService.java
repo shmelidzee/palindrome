@@ -1,4 +1,4 @@
-package com.palindrom.service;
+package com.palindrome.service;
 
 public interface GameService {
 

@@ -1,8 +1,8 @@
-package com.palindrom.service.impl;
+package com.palindrome.service.impl;
 
-import com.palindrom.domain.User;
-import com.palindrom.service.GameService;
-import com.palindrom.service.UserService;
+import com.palindrome.domain.User;
+import com.palindrome.service.GameService;
+import com.palindrome.service.UserService;
 
 public class GameServiceImpl implements GameService {
 

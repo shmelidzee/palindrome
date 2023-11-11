@@ -1,6 +1,6 @@
-package com.palindrom.service.impl;
+package com.palindrome.service.impl;
 
-import com.palindrom.service.StaticService;
+import com.palindrome.service.StaticService;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

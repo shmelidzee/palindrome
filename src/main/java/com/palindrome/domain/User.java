@@ -1,4 +1,4 @@
-package com.palindrom.domain;
+package com.palindrome.domain;
 
 import java.util.List;
 import java.util.Objects;

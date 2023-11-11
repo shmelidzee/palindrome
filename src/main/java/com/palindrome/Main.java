@@ -1,7 +1,7 @@
-package com.palindrom;
+package com.palindrome;
 
-import com.palindrom.service.GameService;
-import com.palindrom.service.impl.GameServiceImpl;
+import com.palindrome.service.GameService;
+import com.palindrome.service.impl.GameServiceImpl;
 
 public class Main {
 
