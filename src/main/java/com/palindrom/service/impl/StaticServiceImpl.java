@@ -6,6 +6,10 @@ public class StaticServiceImpl implements StaticService {
 
     @Override
     public boolean isPalindrome(String inputString, int num) {
+        if (inputString == null || inputString.isEmpty()) {
+            return false;
+        }
+        inputString = inputString.replace(" ", "").toLowerCase();
         if (num == Math.floor((double) inputString.length() / 2)) {
             return true;
         }
