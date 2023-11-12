@@ -2,6 +2,8 @@
 
 # How to run application
 1. Clone a repository locally on your computer
+2. Run sh run.sh in root directory sh run.sh
+3. See result
 
 # Result
 Input data
