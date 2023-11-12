@@ -6,6 +6,7 @@ import com.palindrome.service.UserService;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StatisticServiceImpl implements StatisticService {
 
@@ -20,6 +21,6 @@ public class StatisticServiceImpl implements StatisticService {
         return userService.findAllUsers().stream()
                 .sorted(Comparator.comparingLong(User::getScore).reversed())
                 .limit(5)
-                .toList();
+                .collect(Collectors.toList());
     }
 }
