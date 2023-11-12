@@ -14,3 +14,8 @@ Output data
 
 ![image](https://github.com/shmelidzee/palindrome/assets/100793483/9c532c85-7d48-4aa4-8f8c-86af6d06f998)
 
+# How to imporove the project
+1. Add Lombok
+2. Start Tomcat server
+3. Add Conroller
+4. Add Database, for example PostgreSQL
