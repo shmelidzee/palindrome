@@ -12,8 +12,8 @@ class PalindromeServiceImplTest {
     private final PalindromeService palindromeService = new PalindromeServiceImpl();
 
     @ParameterizedTest
-    @ValueSource(strings = {"Доход","Топот", "заказ", "шалаш",
-            "А роза упала на лапу Азора", "шабаш", "комок"})
+    @ValueSource(strings = {"Р”РѕС…РѕРґ","РўРѕРїРѕС‚", "Р·Р°РєР°Р·", "С€Р°Р»Р°С€",
+            "Рђ СЂРѕР·Р° СѓРїР°Р»Р° РЅР° Р»Р°РїСѓ РђР·РѕСЂР°", "С€Р°Р±Р°С€", "РєРѕРјРѕРє"})
     void isPalindrome(String str) {
         assertTrue(palindromeService.isPalindrome(str, 0));
     }
