@@ -1,6 +1,6 @@
 package com.palindrome.service;
 
-public interface StaticService {
+public interface PalindromeService {
 
     boolean isPalindrome(String inputString, int num);
 }

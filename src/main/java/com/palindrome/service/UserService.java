@@ -6,9 +6,11 @@ import java.util.List;
 
 public interface UserService {
 
-    void addNewWord(String word, Long userId);
-
     User createNewUser(String name);
 
-    List<User> findTopFiveLeaders();
+    User getUserById(Long userId);
+
+    void updateUser(User user);
+
+    List<User> findAllUsers();
 }

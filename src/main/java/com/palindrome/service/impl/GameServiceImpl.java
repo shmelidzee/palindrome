@@ -2,11 +2,21 @@ package com.palindrome.service.impl;
 
 import com.palindrome.domain.User;
 import com.palindrome.service.GameService;
+import com.palindrome.service.PalindromeService;
+import com.palindrome.service.StatisticService;
 import com.palindrome.service.UserService;
 
 public class GameServiceImpl implements GameService {
 
-    private final UserService userService = new UserServiceImpl();
+    private final UserService userService;
+    private final StatisticService statisticService;
+    private final PalindromeService palindromeService;
+
+    public GameServiceImpl(UserService userService, StatisticService statisticService, PalindromeService palindromeService) {
+        this.userService = userService;
+        this.statisticService = statisticService;
+        this.palindromeService = palindromeService;
+    }
 
     @Override
     public void startGame() {
@@ -17,15 +27,25 @@ public class GameServiceImpl implements GameService {
         User denis = userService.createNewUser("Denis");
         User dima = userService.createNewUser("Dmitry");
 
-        userService.addNewWord("Доход", ivan.getId());
-        userService.addNewWord("Топот", ivan.getId());
-        userService.addNewWord("Кабак", pavel.getId());
-        userService.addNewWord("Шалаш", gena.getId());
-        userService.addNewWord("А роза упала на лапу Азора", andrey.getId());
-        userService.addNewWord("заказ", denis.getId());
-        userService.addNewWord("Не палиндром, в список лидеров не попал", dima.getId());
+        addNewWord("Доход", ivan.getId());
+        addNewWord("Топот", ivan.getId());
+        addNewWord("Кабак", pavel.getId());
+        addNewWord("Шалаш", gena.getId());
+        addNewWord("А роза упала на лапу Азора", andrey.getId());
+        addNewWord("заказ", denis.getId());
+        addNewWord("Не палиндром, в список лидеров не попал", dima.getId());
 
-        userService.findTopFiveLeaders()
+        statisticService.findTopFiveLeaders()
                 .forEach(s -> System.out.println(s.getName() + " " + s.getScore()));
+    }
+
+    @Override
+    public void addNewWord(String word, Long userId) {
+        User user = userService.getUserById(userId);
+        if (palindromeService.isPalindrome(word, 0) && !user.getActiveWords().contains(word)) {
+            user.addNewWord(word);
+            user.addScore((long) word.length());
+            userService.updateUser(user);
+        }
     }
 }

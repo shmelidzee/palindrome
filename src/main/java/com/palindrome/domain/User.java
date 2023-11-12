@@ -9,10 +9,10 @@ public class User {
     private Long score;
     private final List<String> activeWords;
 
-    public User(Long id, String name, Long score, List<String> activeWords) {
+    public User(Long id, String name, List<String> activeWords) {
         this.id = id;
         this.name = name;
-        this.score = score;
+        this.score = 0L;
         this.activeWords = activeWords;
     }
 
